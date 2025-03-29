@@ -1,49 +1,58 @@
 .time-entry {
-    width: 100%;
-    max-width: 600px;
-    background-color: #f7f7f7;
-    margin: 1rem 0;
-    padding: 1rem;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .time-entry-content {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .time-entry-note {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
-  
-  .time-entry-details {
-    font-size: 1rem;
-    color: #555;
-    margin: 0;
-  }
-  
-  .time-entry-date {
-    font-weight: 600;
-  }
-  
-  .delete-button {
-    background-color: #ff4d4f;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.2s;
-  }
-  
-  .delete-button:hover {
-    background-color: #d9363e;
-  }
-  
+  width: 100%;
+  max-width: 600px;
+  background-color: #4a4a4a;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #f7f7f7;
+}
+
+.time-entry-content {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.time-entry-note {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.time-entry-details {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #f7f7f7;
+}
+
+.time-entry-date {
+  font-weight: 600;
+}
+
+.delete-button {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.delete-button:hover {
+  background-color: #d9363e;
+}
+
+.service-name {
+  display: block;
+  font-size: 0.9rem;
+  color: #cccccc;
+  margin-top: 0.5rem;
+  text-align: right;
+}

@@ -1,3 +1,3 @@
 export type TService = {
-    serviceID: string
-}
+  serviceID: string;
+};

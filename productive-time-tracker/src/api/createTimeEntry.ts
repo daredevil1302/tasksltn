@@ -1,20 +1,9 @@
 import { apiFetch } from "./apiClient";
 import type { TTimeEntryPayload } from "../types/timeEntryType";
 import type { TCreateTimeEntryParams } from "../types/timeEntryType";
-import { getRandomServiceID } from "../helpers/getRandomServiceId";
 
-
-export const createTimeEntry = async (
-  params: TCreateTimeEntryParams
-) => {
-  const {
-    note,
-    date,
-    time,
-    personId,
-    serviceId = getRandomServiceID(),
-    taskId,
-  } = params;
+export const createTimeEntry = async (params: TCreateTimeEntryParams) => {
+  const { note, date, time, personId, serviceId, taskId } = params;
 
   const payload: TTimeEntryPayload = {
     data: {

@@ -1,7 +1,9 @@
 .time-entries-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.no-time-entries {
+  color: #4a4a4a;
+}
