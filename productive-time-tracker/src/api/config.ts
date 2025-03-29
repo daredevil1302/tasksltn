@@ -8,4 +8,4 @@ export const headers = {
   "X-Organization-Id": ORG_ID,
 };
 
-export { API_URL };
+export { API_URL, ORG_ID };
