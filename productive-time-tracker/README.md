@@ -1,54 +1,133 @@
-# React + TypeScript + Vite
+# Productive Time Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A client-side web application built with React, TypeScript, and Vite that connects to the Productive API to manage time entries for the current day.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### List Today's Time Entries
+- Display all time entries created for the current day
+- Show details including time worked, description, and associated service
+- Automatic refresh upon changes
 
-## Expanding the ESLint configuration
+### Add New Time Entries
+- User-friendly form for new entries
+- Input fields for description and time (in minutes)
+- Automatic date setting to current day
+- Service selection via predefined mapping
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Delete Time Entries
+- One-click deletion functionality
+- Automatic UI refresh after deletion
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+## Core Functionality
+
+### Organization Membership & User Data
+- Retrieves organization memberships using organization ID
+- Extracts Person model (first name, last name, ID)
+- Displays user information in header
+
+### Time Entries Management
+
+#### Fetching
+- Retrieves today's entries based on user's person ID
+- Implements date filtering
+- Real-time updates
+
+#### Creation
+- Form-based entry creation
+- Collects description and time
+- Automatic date assignment
+- Predefined service mapping
+
+#### Deletion
+- DELETE request implementation
+- Automatic list refresh
+- Error handling
+
+### Additional Features
+- Services mapping (ID to name conversion)
+- Loading states with spinner
+- Comprehensive error handling
+- Responsive user feedback
+
+## Technology Stack
+
+- React with TypeScript
+- Vite for development and building
+- ESLint for code quality
+- Prettier for code formatting
+- React Hook Form for form management
+
+## Getting Started
+
+### Prerequisites
+- Node.js (latest LTS version recommended)
+- npm or pnpm
+
+### Installation
+
+```bash
+# Using npm
+npm install
+
+# Using pnpm
+pnpm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development Server
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+```bash
+# Using npm
+npm run dev
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    "react-x": reactX,
-    "react-dom": reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs["recommended-typescript"].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
+# Using pnpm
+pnpm run dev
 ```
+
+### Production Build
+
+```bash
+# Using npm
+npm run build
+
+# Using pnpm
+pnpm run build
+```
+
+## Code Quality
+
+### Linting
+```bash
+npm run lint
+```
+
+### Formatting
+- Files are automatically formatted on save
+- Requires editor configuration: `"editor.formatOnSave": true`
+
+## Project Structure
+
+```
+src/
+├── api/         # API integration
+├── components/  # React components
+├── types/       # TypeScript types
+├── constants/   # Constants and configs
+└── helpers/     # Utility functions
+```
+
+## Development Notes
+
+### Type Safety
+- TypeScript implementation throughout
+- Pragmatic approach to type safety
+
+### Future Improvements
+- Enhanced type definitions with complete API documentation
+- Additional service management features
+- Extended error handling
+- Performance optimizations
+
+## License
+
+[MIT License](LICENSE)
